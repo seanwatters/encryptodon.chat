@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Encryptodon</title>
+
+    <!-- 
+        encryptodon.chat is a silly tool for adding e2ee to Mastodon private mentions.
+
+        Copyright (C) 2024 sean watters
+
+        This program is free software: you can redistribute it and/or modify
+        it under the terms of the GNU Affero General Public License as
+        published by the Free Software Foundation, either version 3 of the
+        License, or (at your option) any later version.
+
+        This program is distributed in the hope that it will be useful,
+        but WITHOUT ANY WARRANTY; without even the implied warranty of
+        MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+        GNU Affero General Public License for more details.
+
+        You should have received a copy of the GNU Affero General Public License
+        along with this program.  If not, see <http://www.gnu.org/licenses/>. 
+    -->
+
+    <link rel="stylesheet" href="css/index.css" />
+
+    <script type="module" defer src="js/index.js"></script>
+  </head>
+
+  <body>
+    <header>
+      <h1>Encryptodon 🐘🕶️</h1>
+      <label
+        >🔐:
+        <input id="private-key" type="text" placeholder="Private Key" />
+      </label>
+      <button>🔄 Keys</button>
+      <a href="">Authorize</a>
+    </header>
+    <main>
+      <section id="chats">
+        <div id="chats-header">
+          <h2>Chats</h2>
+        </div>
+        <input id="search" type="text" placeholder="👤 Search" />
+        <div class="chat">
+          <img
+            class="list-avatar"
+            src="https://avatars.githubusercontent.com/u/99699018?v=4"
+          />
+          <div>
+            <h3>Taylor</h3>
+            <p>Hello yourself</p>
+          </div>
+        </div>
+      </section>
+      <section id="current-chat">
+        <div id="current-chat-header">
+          <img
+            id="current-avatar"
+            src="https://avatars.githubusercontent.com/u/99699018?v=4"
+          />
+          <h2>Taylor</h2>
+        </div>
+        <div id="messages">
+          <div class="our message">Hello</div>
+          <div class="their message">Hello yourself</div>
+        </div>
+        <textarea id="message-box" placeholder="Message"></textarea>
+      </section>
+    </main>
+    <footer>
+      <p>© 2024 sean watters | AGPL-3.0</p>
+    </footer>
+  </body>
+</html>
