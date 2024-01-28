@@ -1,3 +1,5 @@
 # encryptodon.chat
 
-Pages Site for Encryptodon
+The GitHub pages site for Encryptodon Chat.
+
+Depends on the [Encryptodon](https://github.com/seanwatters/encryptodon) package.

@@ -26,7 +26,9 @@
     -->
 
     <link rel="stylesheet" href="css/styles.css" />
-    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/chat.css" />
+
+    <script type="module" defer src="js/chat.js"></script>
   </head>
 
   <body>
@@ -34,7 +36,36 @@
       <h1>Encryptodon🐘🕶️</h1>
     </header>
     <main>
-      <p>The home page.</p>
+      <section id="chats">
+        <div id="chats-header">
+          <h2>Chats</h2>
+        </div>
+        <input id="search" type="text" placeholder="👤 Search" />
+        <div class="chat">
+          <img
+            class="list-avatar"
+            src="https://avatars.githubusercontent.com/u/99699018?v=4"
+          />
+          <div>
+            <h3>Taylor</h3>
+            <p>Hello yourself</p>
+          </div>
+        </div>
+      </section>
+      <section id="current-chat">
+        <div id="current-chat-header">
+          <img
+            id="current-avatar"
+            src="https://avatars.githubusercontent.com/u/99699018?v=4"
+          />
+          <h2>Taylor</h2>
+        </div>
+        <div id="messages">
+          <div class="our message">Hello</div>
+          <div class="their message">Hello yourself</div>
+        </div>
+        <textarea id="message-box" placeholder="Message"></textarea>
+      </section>
     </main>
     <footer>
       <p>
