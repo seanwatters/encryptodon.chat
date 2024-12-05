@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Encryptodon</title>
+    <title>encryptodon</title>
 
     <!-- 
         encryptodon.chat is a silly tool for adding e2ee to Mastodon private mentions.
@@ -26,20 +26,96 @@
     -->
 
     <link rel="stylesheet" href="css/styles.css" />
-    <link rel="stylesheet" href="css/index.css" />
+    <script type="module" defer src="js/main.js"></script>
   </head>
 
   <body>
     <header>
-      <h1>Encryptodon🐘🕶️</h1>
+      <span>
+        <a href="/">
+          <h1>🔒🐘encryptodon</h1>
+        </a>
+        <p id="catchphrase">pachyderm goes private. 🦣</p>
+      </span>
+      <span>
+        <a id="logout" style="display: none" href="/logout.html">logout💨</a>
+        <a id="signin" href="/signin.html">signin✅</a>
+        <a id="donate" href="/donate.html">donate💰</a>
+        <button id="user-settings" style="display: none">👤⚙️</button>
+      </span>
     </header>
     <main>
-      <p>The home page.</p>
+      <section id="loggedout">
+        hello &nbsp;
+        <div>🕶️</div>
+        &nbsp; there
+      </section>
+      <section id="signedin" style="display: none">
+        <section id="chats">
+          <div id="chats-header">
+            <h2>chats</h2>
+            <span>
+              <button id="add">+👤</button>
+              <button id="view-key">👀🔑</button>
+            </span>
+          </div>
+          <input id="search" type="text" placeholder="🔎 Search" />
+          <section id="previews">
+            <div class="chat">
+              <span class="left">
+                <img
+                  class="list-avatar"
+                  src="https://avatars.githubusercontent.com/u/99699018?v=4"
+                />
+                <div>
+                  <h3>Taylor</h3>
+                  <p>hello yourself</p>
+                </div>
+              </span>
+              <span class="right">
+                <button>⚙️</button>
+              </span>
+            </div>
+            <div class="chat">
+              <span class="left">
+                <img
+                  class="list-avatar"
+                  src="https://avatars.githubusercontent.com/u/99699018?v=4"
+                />
+                <div>
+                  <h3>Taylor</h3>
+                  <p>hello yourself</p>
+                </div>
+              </span>
+              <span class="right">
+                <button>⚙️</button>
+              </span>
+            </div>
+          </section>
+        </section>
+        <section id="current-chat">
+          <div id="current-chat-header">
+            <img
+              id="current-avatar"
+              src="https://avatars.githubusercontent.com/u/99699018?v=4"
+            />
+            <h2>Taylor</h2>
+            &nbsp;|&nbsp;
+            <a href="/@taylor@taylor.com">@taylor@taylor.com</a>
+          </div>
+          <div id="messages">
+            <div class="our message">hello</div>
+            <div class="their message">hello, yourself</div>
+          </div>
+          <textarea id="message-box" placeholder="💬 message"></textarea>
+        </section>
+      </section>
     </main>
     <footer>
       <p>
-        AGPL-3.0 | © 2024 sean watters |
-        <a href="https://github.com/seanwatters/encryptodon.chat">source</a>
+        agpl-3.0 | <button>disclaimer</button> | © 2024 sean watters |
+        <a href="https://github.com/seanwatters/encryptodon.chat">source</a> |
+        <a href="https://github.com/seanwatters/encryptodon.chat">bugs</a>
       </p>
     </footer>
   </body>

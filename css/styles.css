@@ -21,13 +21,16 @@ body {
   margin: 0 auto;
   max-width: 900px;
   font-family: monospace;
+  background-color: black;
+  color: green;
 }
 
 header {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   height: 100px;
+  padding: 0px 12px;
 }
 
 main {
@@ -35,6 +38,7 @@ main {
   width: 100%;
   justify-content: space-between;
   height: calc(100vh - 200px);
+  padding: 0px 12px;
 }
 
 footer {
@@ -47,4 +51,212 @@ footer {
 input {
   height: 22px;
   font-family: monospace;
+}
+
+input,
+textarea {
+  font-family: monospace;
+  background-color: black;
+  color: green;
+  border-color: green;
+  border-bottom-width: 1px;
+  border-top-width: 1px;
+  border-left-width: 1px;
+  border-right-width: 1px;
+  border-top-style: solid;
+  border-right-style: solid;
+  border-bottom-style: solid;
+  border-left-style: solid;
+}
+
+::placeholder {
+  color: green;
+}
+
+a {
+  color: green;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  color: green;
+  border-color: green;
+  outline: green;
+}
+
+button {
+  outline: green;
+  border-color: green;
+  border-style: solid;
+  border-radius: 8px;
+  color: green;
+  background-color: black;
+  border-width: 1px;
+}
+
+ul {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+li {
+  padding-left: 1em;
+  text-indent: -1em;
+}
+
+li:before {
+  content: "💰";
+  padding-right: 5px;
+}
+
+#loggedout {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+#loggedout > div {
+  font-size: 10em;
+}
+
+#keys {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+
+#chats {
+  width: 40%;
+  border: 1px solid;
+  height: 100%;
+  overflow-y: scroll;
+  scrollbar-width: thin;
+  scrollbar-color: green transparent;
+}
+
+#chats-header {
+  padding: 8px;
+  margin-bottom: 8px;
+  width: calc(100% - 16px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#chats-header > h2 {
+  margin: 0px;
+}
+
+#chats-header > button {
+  font-size: 16px;
+}
+
+#add {
+  height: fit-content;
+}
+
+#search {
+  width: calc(100% - 24px);
+  margin: 0 0 16px 8px;
+}
+
+#previews {
+  border-top: 1px solid;
+  height: 100%;
+}
+
+.chat {
+  display: flex;
+  padding: 8px;
+  border-bottom: 1px solid;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.chat > .left {
+  display: flex;
+  align-items: center;
+}
+
+.chat > .right {
+  display: flex;
+  align-items: center;
+}
+
+.list-avatar {
+  height: 45px;
+  border-radius: 100%;
+  margin-right: 8px;
+}
+
+.chat > .left > div > h3 {
+  margin-bottom: 0;
+  margin-top: 16px;
+}
+
+.chat > .left > div > p {
+  margin-top: 8px;
+}
+
+#current-chat {
+  width: 60%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid;
+  border-right: 1px solid;
+  border-bottom: 1px solid;
+}
+
+#current-chat-header {
+  display: flex;
+  padding: 8px;
+  align-items: center;
+}
+
+#current-chat-header > h2 {
+  margin-left: 8px;
+}
+
+#current-avatar {
+  height: 25px;
+  border-radius: 100%;
+}
+
+#messages {
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  scrollbar-width: thin;
+  scrollbar-color: green transparent;
+  flex-grow: 1;
+  padding: 10px;
+}
+
+.message {
+  color: black;
+  padding: 8px 14px;
+  border-radius: 20px;
+}
+
+.our.message {
+  align-self: flex-end;
+  background-color: green;
+}
+
+.their.message {
+  background-color: green;
+  width: max-content;
+}
+
+#message-box {
+  padding: 8px;
+  resize: none;
+  border-bottom-width: 0px;
+  border-left-width: 0px;
+  border-right-width: 0px;
 }
