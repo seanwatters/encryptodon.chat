@@ -1,4 +1,4 @@
-# encryptodon.chat
+# (WIP) encryptodon.chat
 
 The GitHub pages site for Encryptodon Chat.
 
